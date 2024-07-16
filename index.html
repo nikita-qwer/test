@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formular de Înregistrare</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Formular de Inregistrare</h1>
+    </header>
+    <main>
+        <form id="registration-form">
+            <label for="nume">Nume complet:</label>
+            <input type="text" id="nume" name="nume" required><br><br>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+            
+            <label for="parola">Parola (minim 8 caractere):</label>
+            <input type="password" id="parola" name="parola" pattern=".{8,}" required><br><br>
+            
+            <label for="confirmare-parola">Confirmare parola:</label>
+            <input type="password" id="confirmare-parola" name="confirmare-parola" required><br><br>
+            
+            <label for="tara">Tara:</label>
+            <select id="tara" name="tara" required>
+                <option value="">Selecteaza yara</option>
+                <option value="Romania">Romania</option>
+                <option value="Franta">Franta</option>
+                <option value="Germania">Germania</option>
+                <option value="Italia">Italia</option>
+            </select><br><br>
+            
+            <fieldset>
+                <legend>Interese:</legend>
+                <label><input type="checkbox" name="interese" value="Sport"> Sport</label><br>
+                <label><input type="checkbox" name="interese" value="Muzica"> Muzica</label><br>
+                <label><input type="checkbox" name="interese" value="Tehnologie"> Tehnologie</label><br>
+            </fieldset><br>
+            
+            <fieldset>
+                <legend>Gen:</legend>
+                <label><input type="radio" name="gen" value="masculin" required> Masculin</label>
+                <label><input type="radio" name="gen" value="feminin"> Feminin</label>
+                <label><input type="radio" name="gen" value="altul"> Altul</label>
+            </fieldset><br>
+            
+            <input type="submit" value="Inregistrare">
+        </form>
+        
+        <div id="user-list">
+            <h2>Lista utilizatorilor Inregistrati</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nume</th>
+                        <th>Email</th>
+                        <th>Tara</th>
+                    </tr>
+                </thead>
+                <tbody id="users">
+                    
+                </tbody>
+            </table>
+        </div>
+    </main>
+    <footer>
+        <p><a href="#">Facebook</a>, <a href="#">Twitter</a>, <a href="#">Instagram</a></p>
+    </footer>
+
+    
+</body>
+</html>
+<script src="script.js"></script>
